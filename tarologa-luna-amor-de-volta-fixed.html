@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taróloga Luna — Traga seu amor de volta com sigilo</title>
+  <meta name="description" content="Especialista em reconciliação amorosa. Traga seu amor de volta com respeito, discrição e orientação séria. Atendimento online e por vídeo." />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg:#0B0720; --primary:#7C3AED; --primarySoft:#A78BFA; --accent:#B5179E; --stroke:rgba(255,255,255,.08);
+    }
+    body{background:var(--bg);}  
+    /* orbes */
+    .orb{position:fixed; inset:auto; width:260px; height:260px; border-radius:9999px; filter:blur(40px); opacity:.35; z-index:-1; pointer-events:none; background:radial-gradient(circle at 30% 30%, #C084FC, transparent 60%); animation: drift 22s ease-in-out infinite alternate;}
+    .orb:nth-child(2){animation-duration:27s;}
+    .orb:nth-child(3){animation-duration:31s;}
+    @keyframes drift{from{transform:translate(10vw,10vh)} to{transform:translate(70vw,60vh)}}
+    /* vidro */
+    .glass{backdrop-filter: blur(10px); background:rgba(255,255,255,.04); border:1px solid var(--stroke);}
+    .btn-grad{background:linear-gradient(120deg, var(--primary), var(--accent));}
+    .slide{transition:opacity .5s ease, transform .5s ease}
+    .icon-card{position:absolute; width:60px; height:60px; opacity:0.2;}
+    /* elementos místicos */
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+    .spin-slow{animation:spin 16s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .shine{position:relative;overflow:hidden}
+    .shine:after{content:"";position:absolute;inset:0;transform:skewX(-20deg) translateX(-120%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);animation:shimmer 5s ease-in-out infinite}
+    @keyframes shimmer{50%{transform:skewX(-20deg) translateX(120%)}}
+    /* Carta de tarô */
+    .tarot{width:120px;height:180px;border-radius:12px;background:linear-gradient(160deg,#2E1A47,#4C1D95);border:1px solid var(--stroke);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+    .tarot .inner{position:relative;inset:0;border-radius:inherit;background:radial-gradient(circle at 30% 10%, rgba(167,139,250,.25), transparent 60%)}
+    .tarot .moon{position:absolute;left:50%;top:45%;width:60px;height:60px;border-radius:9999px;background:#E9D5FF;transform:translate(-50%,-50%)}
+    .tarot .moon:before{content:"";position:absolute;inset:0;border-radius:9999px;box-shadow:inset -12px 0 0 0 #2E1A47}
+    .tarot .star{position:absolute;width:6px;height:6px;background:#C084FC;transform:rotate(45deg)}
+    /* Bola de cristal */
+    .crystal{width:140px;height:140px;border-radius:9999px;background:radial-gradient(circle at 35% 25%,#E9D5FF,#A78BFA 40%,#7C3AED 70%,transparent 75%);box-shadow:0 0 40px #7C3AED66}
+    .crystal-base{width:120px;height:28px;border-radius:10px;background:linear-gradient(#2D103F,#1B0A28);border:1px solid var(--stroke)}
+    /* Incenso */
+    .incense{width:120px;height:6px;background:linear-gradient(90deg,#4C1D95,#7C3AED);border-radius:9999px;position:relative}
+    .smoke{position:absolute;left:85%;top:-10px;width:4px;height:4px;border-radius:9999px;background:#ffffff55;filter:blur(1px);animation:rise 4s linear infinite}
+    @keyframes rise{0%{transform:translateY(0) scale(1);opacity:.8}100%{transform:translateY(-60px) scale(1.8);opacity:0}}
+  </style>
+</head>
+<body class="text-white antialiased">
+  <!-- Orbes -->
+  <div class="orb" style="top:8vh; left:5vw"></div>
+  <div class="orb" style="top:50vh; left:70vw"></div>
+  <div class="orb" style="top:75vh; left:15vw"></div>
+
+  <!-- Decorações místicas de fundo -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute left-[6%] top-[22%] float rotate-[-8deg]">
+      <div class="tarot shine">
+        <div class="inner">
+          <div class="moon"></div>
+          <div class="tarot stars">
+            <div class="star" style="left:14px; top:18px"></div>
+            <div class="star" style="right:18px; top:24px"></div>
+            <div class="star" style="left:22px; bottom:26px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute right-[8%] top-[28%] float rotate-[6deg]">
+      <div class="tarot">
+        <div class="inner">
+          <div class="moon" style="left:52%; top:52%; width:46px; height:46px"></div>
+          <div class="star" style="left:12px; top:28px"></div>
+          <div class="star" style="right:16px; bottom:24px"></div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute left-[12%] bottom-[12%] spin-slow">
+      <div class="crystal"></div>
+      <div class="crystal-base mt-3 mx-auto"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-white/10 glass">
+    <div class="mx-auto flex max-w-6xl items-center justify-start gap-3 px-6 py-4">
+      <div class="flex items-center gap-3">
+        <!-- Logo vetorial -->
+        <svg width="44" height="44" viewBox="0 0 200 200" class="drop-shadow-[0_0_18px_rgba(192,132,252,0.5)]" aria-hidden="true">
+          <defs>
+            <radialGradient id="logoGlow" cx="50%" cy="50%" r="60%">
+              <stop offset="0%" stop-color="#C084FC" stop-opacity="0.9" />
+              <stop offset="55%" stop-color="#7C3AED" stop-opacity="0.95" />
+              <stop offset="100%" stop-color="#0B0720" stop-opacity="1" />
+            </radialGradient>
+          </defs>
+          <circle cx="100" cy="100" r="86" fill="url(#logoGlow)" stroke="#A78BFA" stroke-width="3" />
+          <path d="M120,55a45,45 0 1,0 0,90a35,35 0 1,1 0,-90z" fill="#E9D5FF" opacity="0.95" />
+          <ellipse cx="118" cy="100" rx="20" ry="12" fill="none" stroke="#3B0764" stroke-width="3" />
+          <circle cx="118" cy="100" r="6" fill="#3B0764" />
+        </svg>
+        <div>
+          <div class="text-xl font-semibold">Taróloga Luna</div>
+          <div class="-mt-1 text-[11px] tracking-widest uppercase text-white/60">Intuição • Clarividência • Tarô</div>
+        </div>
+      </div>
+      <nav class="hidden gap-8 md:flex text-white/80">
+        <a href="#servicos" class="hover:text-white">Serviços</a>
+        <a href="#como-funciona" class="hover:text-white">Como funciona</a>
+        <a href="#depoimentos" class="hover:text-white">Depoimentos</a>
+        <a href="#faq" class="hover:text-white">Perguntas</a>
+        <a class="rounded-full px-4 py-2 text-sm font-medium text-white shadow-lg btn-grad" id="ctaTop" target="_blank">Agendar consulta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-white/10 relative">
+    <div class="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 px-6 py-24 md:py-36">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px] tracking-widest uppercase text-white/70" style="border-color:var(--stroke)">Reconciliação amorosa • Atendimento sigiloso</div>
+        <h1 class="mt-5 text-4xl md:text-5xl font-semibold leading-tight">Traga seu amor de volta —<span class="block bg-clip-text text-transparent" style="background-image:linear-gradient(120deg, var(--primarySoft), #C084FC)">com sigilo e responsabilidade</span>
+        </h1>
+        <p class="mt-5 max-w-xl text-white/80">Reconciliação amorosa com método claro: leitura de Tarô para mapear motivos do afastamento, orientação prática de comunicação e, quando fizer sentido, rituais de harmonização. Nada de promessas impossíveis — só trabalho responsável no seu caso.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a class="rounded-full px-6 py-3 text-sm font-semibold text-white shadow-xl btn-grad" id="ctaHero" target="_blank">Agendar pelo WhatsApp</a>
+          <a href="#servicos" class="rounded-full border px-6 py-3 text-sm font-semibold text-white/90 hover:text-white" style="border-color:var(--stroke)">Ver serviços</a>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-6 text-white/60 text-xs">
+          <div class="flex items-center gap-2"><span>★</span> +1.500 atendimentos</div>
+          <div class="flex items-center gap-2"><span>⏱</span> Consulta de 30–60 min</div>
+          <div class="flex items-center gap-2"><span>🔒</span> Sigilo absoluto</div>
+        </div>
+      </div>
+      <div>
+        <div class="glass p-6 rounded-2xl relative">
+          <div class="relative rounded-xl overflow-hidden aspect-[4/5] flex items-center justify-center bg-gradient-to-b from-[#4C1D95]/40 to-transparent">
+            <!-- Deck flutuante -->
+            <div class="absolute inset-0 pointer-events-none">
+              <div class="absolute left-6 top-8 rotate-[-8deg] float">
+                <div class="tarot shine"><div class="inner"><div class="moon"></div></div></div>
+              </div>
+              <div class="absolute right-6 top-10 rotate-[6deg] float" style="animation-delay:.8s">
+                <div class="tarot"><div class="inner"><div class="moon" style="width:46px;height:46px;left:52%;top:52%"></div></div></div>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 bottom-24 rotate-[12deg] float" style="animation-delay:1.4s">
+                <div class="tarot"><div class="inner"><div class="moon" style="width:40px;height:40px"></div></div></div>
+              </div>
+            </div>
+            <!-- Bola de cristal -->
+            <div class="crystal"></div>
+            <div class="absolute bottom-0 left-0 right-0 m-6 rounded-xl border p-5 text-white/80" style="background:rgba(0,0,0,.2); border-color:var(--stroke)">
+              <div class="text-sm uppercase tracking-widest text-white/70">Arcanos Maiores</div>
+              <div class="mt-1 text-xl font-semibold">A Sacerdotisa</div>
+              <p class="mt-2 text-sm">Intuição, mistério e sabedoria interior. A mensagem da noite: confie no que sente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faixa talismãs -->
+  <section class="py-10 border-b border-white/10">
+    <div class="mx-auto max-w-6xl px-6 flex items-center justify-center gap-8 opacity-80 text-2xl">
+      <div>🔮</div><div>🃏</div><div>🌙</div><div>✨</div><div>♎</div><div>♑</div><div>♓</div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-24 md:py-32">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <div class="text-sm uppercase tracking-widest text-white/60">Serviços</div>
+        <h2 class="mt-2 text-3xl font-semibold">Escolha sua leitura</h2>
+        <p class="mt-2 text-white/70">Cada sessão é única. Encontre o formato que melhor se conecta com seu momento.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="glass rounded-2xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <div class="flex items-start justify-start gap-3">
+            <h3 class="text-lg font-semibold">Reconciliação guiada pelo Tarô</h3>
+            <span class="rounded-full px-2 py-1 text-[10px] uppercase tracking-widest text-white/80" style="background:rgba(124,58,237,.1); border:1px solid var(--stroke)">popular</span>
+          </div>
+          <p class="mt-2 text-sm text-white/70">Leitura direcionada ao relacionamento: entendemos causas do afastamento e alternativas reais de reaproximação.</p>
+          <div class="my-6 flex items-center gap-4"><div class="h-px flex-1" style="background:var(--stroke)"></div><div class="text-white/60 text-xs tracking-widest">• • •</div><div class="h-px flex-1" style="background:var(--stroke)"></div></div>
+          <div class="flex items-center justify-start gap-3">
+            <a class="rounded-full px-4 py-2 text-sm font-medium text-white shadow-lg btn-grad" target="_blank" id="ctaS1">Agendar</a>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <div class="flex items-start justify-start gap-3">
+            <h3 class="text-lg font-semibold">Abertura de caminhos amorosos</h3>
+          </div>
+          <p class="mt-2 text-sm text-white/70">Ativações energéticas e orientações de conduta para destravar comunicação, perdão e reconexão.</p>
+          <div class="my-6 flex items-center gap-4"><div class="h-px flex-1" style="background:var(--stroke)"></div><div class="text-white/60 text-xs tracking-widest">• • •</div><div class="h-px flex-1" style="background:var(--stroke)"></div></div>
+          <div class="flex items-center justify-start gap-3">
+            <a class="rounded-full px-4 py-2 text-sm font-medium text-white shadow-lg btn-grad" target="_blank" id="ctaS2">Agendar</a>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <div class="flex items-start justify-start gap-3">
+            <h3 class="text-lg font-semibold">Harmonização do casal</h3>
+          </div>
+          <p class="mt-2 text-sm text-white/70">Limpeza e proteção para reduzir interferências e ciúmes, restaurando a paz entre o casal.</p>
+          <div class="my-6 flex items-center gap-4"><div class="h-px flex-1" style="background:var(--stroke)"></div><div class="text-white/60 text-xs tracking-widest">• • •</div><div class="h-px flex-1" style="background:var(--stroke)"></div></div>
+          <div class="flex items-center justify-start gap-3">
+            <a class="rounded-full px-4 py-2 text-sm font-medium text-white shadow-lg btn-grad" target="_blank" id="ctaS3">Agendar</a>
+          </div>
+        </div>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 mt-6">
+        <div class="glass rounded-2xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <div class="flex items-start justify-start gap-3">
+            <h3 class="text-lg font-semibold">Carreira & Prosperidade</h3>
+          </div>
+          <p class="mt-2 text-sm text-white/70">Caminhos profissionais, mudanças de rota e finanças. Foque em decisões práticas.</p>
+          <div class="my-6 flex items-center gap-4"><div class="h-px flex-1" style="background:var(--stroke)"></div><div class="text-white/60 text-xs tracking-widest">• • •</div><div class="h-px flex-1" style="background:var(--stroke)"></div></div>
+          <div class="flex items-center justify-start gap-3">
+            <a class="rounded-full px-4 py-2 text-sm font-medium text-white shadow-lg btn-grad" target="_blank" id="ctaS4">Agendar</a>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover:-translate-y-1 hover:shadow-2xl transition">
+          <div class="flex items-start justify-start gap-3">
+            <h3 class="text-lg font-semibold">Mapa Astral Intuitivo</h3>
+          </div>
+          <p class="mt-2 text-sm text-white/70">Leitura de mapa com enfoque terapêutico e aplicável ao dia a dia.</p>
+          <div class="my-6 flex items-center gap-4"><div class="h-px flex-1" style="background:var(--stroke)"></div><div class="text-white/60 text-xs tracking-widest">• • •</div><div class="h-px flex-1" style="background:var(--stroke)"></div></div>
+          <div class="flex items-center justify-start gap-3">
+            <a class="rounded-full px-4 py-2 text-sm font-medium text-white shadow-lg btn-grad" target="_blank" id="ctaS5">Agendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="py-24 md:py-32">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <div class="text-sm uppercase tracking-widest text-white/60">Como funciona</div>
+        <h2 class="mt-2 text-3xl font-semibold">Simples, humano e direto</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="glass rounded-2xl p-6">
+          <div class="grid h-10 w-10 place-items-center rounded-full text-sm font-bold text-white btn-grad">1</div>
+          <div class="mt-3 font-semibold">Fale com a Luna</div>
+          <p class="text-sm text-white/70">Conte seu momento e o que deseja entender — sem julgamentos, com carinho e objetividade.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="grid h-10 w-10 place-items-center rounded-full text-sm font-bold text-white btn-grad">2</div>
+          <div class="mt-3 font-semibold">Escolha o método</div>
+          <p class="text-sm text-white/70">Tarô, tiragem de 3 cartas, Mesa Real, Mapa Astral ou foco em Amor/Carreira.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="grid h-10 w-10 place-items-center rounded-full text-sm font-bold text-white btn-grad">3</div>
+          <div class="mt-3 font-semibold">Receba a leitura</div>
+          <p class="text-sm text-white/70">Consulta por chamada de voz/vídeo. Orientações práticas e um direcionamento claro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-24 md:py-32">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="glass overflow-hidden rounded-2xl">
+        <div class="grid md:grid-cols-2">
+          <div class="p-8">
+            <div class="text-sm uppercase tracking-widest text-white/60">Depoimentos</div>
+            <div class="mt-2 text-2xl font-semibold">O que dizem as consultas</div>
+            <p class="mt-3 text-white/70">Histórias reais de quem encontrou clareza com a Luna. Troque ansiedade por direção.</p>
+            <a class="mt-6 inline-block rounded-full px-5 py-2 text-sm font-medium text-white shadow btn-grad" id="ctaMid" target="_blank">Agendar consulta</a>
+          </div>          <div class="relative border-l p-8" style="border-color:var(--stroke)">            <blockquote id="t1" class="slide text-lg text-white/90">“A Luna me trouxe paz e um plano. O tarô foi direto e carinhoso. Me ajudou a decidir sobre meu relacionamento.”<div class="mt-4 text-sm text-white/60">Marina S.</div></blockquote>            <blockquote id="t2" class="slide absolute inset-0 p-8 opacity-0">“Estava perdido profissionalmente. Saí com passos claros e uma confiança que eu não sentia há meses.”<div class="mt-4 text-sm text-white/60">João P.</div></blockquote>            <blockquote id="t3" class="slide absolute inset-0 p-8 opacity-0">“Nada de promessas. Só verdade e acolhimento. Virei cliente fiel!”<div class="mt-4 text-sm text-white/60">Bianca R.</div></blockquote>            <div class="mt-6 flex gap-2">              <button class="h-2 w-6 rounded-full" style="background:#A78BFA" onclick="show(1)"></button>              <button class="h-2 w-6 rounded-full opacity-40" style="background:#A78BFA" onclick="show(2)"></button>              <button class="h-2 w-6 rounded-full opacity-40" style="background:#A78BFA" onclick="show(3)"></button>            </div>          </div>        </div>      </div>    </div>  </section>  <!-- Galeria Mística -->  <section id="galeria" class="py-24 md:py-32">    <div class="mx-auto max-w-6xl px-6">      <div class="mx-auto mb-10 max-w-2xl text-center">        <div class="text-sm uppercase tracking-widest text-white/60">Elementos</div>        <h2 class="mt-2 text-3xl font-semibold">Cartas, bola de cristal e incenso</h2>        <p class="mt-2 text-white/70">Detalhes que criam a atmosfera certa para sua consulta.</p>      </div>      <div class="grid gap-6 md:grid-cols-3">        <div class="glass rounded-2xl p-6 flex flex-col items-center">          <div class="tarot float mb-4"><div class="inner"><div class="moon"></div></div></div>          <div class="font-semibold">Carta de Tarô</div>          <p class="text-sm text-white/70 text-center mt-2">Símbolo de intuição e leitura dos ciclos.</p>        </div>        <div class="glass rounded-2xl p-6 flex flex-col items-center">          <div class="crystal mb-3"></div><div class="crystal-base mb-2"></div>          <div class="font-semibold">Bola de Cristal</div>          <p class="text-sm text-white/70 text-center mt-2">Foco e presença para a consulta.</p>        </div>        <div class="glass rounded-2xl p-6 flex flex-col items-center">          <div class="incense mt-6">            <span class="smoke" style="animation-delay:.2s"></span>            <span class="smoke" style="animation-delay:.8s"></span>            <span class="smoke" style="animation-delay:1.4s"></span>          </div>          <div class="font-semibold mt-10">Incenso</div>          <p class="text-sm text-white/70 text-center mt-2">Purificação simbólica do ambiente.</p>        </div>      </div>    </div>  </section>  <!-- FAQ -->  
+<section id="faq" class="py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center">Dúvidas frequentes</h2>
+    <div class="mt-10 divide-y divide-white/10 rounded-2xl border border-white/10 bg-white/5">
+      <details class="group p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between">
+          <span class="font-medium">Como é o trabalho para trazer o amor de volta?</span>
+          <svg class="w-5 h-5 transition group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+        </summary>
+        <p class="mt-3 text-white/70">Começamos com leitura de Tarô focada no relacionamento, definimos um plano de reconciliação (postura, comunicação e possíveis rituais) e acompanhamos a evolução. Sempre com respeito ao livre-arbítrio.</p>
+      </details>
+      <details class="group p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between">
+          <span class="font-medium">Em quanto tempo vejo resultados?</span>
+          <svg class="w-5 h-5 transition group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+        </summary>
+        <p class="mt-3 text-white/70">Cada história é única. O foco está em criar condições reais para a reaproximação (contato, acolhimento, tempo e atitudes). Compartilho prazos prováveis após a análise do seu caso.</p>
+      </details>
+      <details class="group p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between">
+          <span class="font-medium">É online e sigiloso?</span>
+          <svg class="w-5 h-5 transition group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+        </summary>
+        <p class="mt-3 text-white/70">Sim. Atendo por chamada de vídeo/áudio ou chat, com total discrição. Seus dados não são compartilhados.</p>
+      </details>
+      <details class="group p-6">
+        <summary class="flex cursor-pointer list-none items-center justify-between">
+          <span class="font-medium">O que devo fazer enquanto isso?</span>
+          <svg class="w-5 h-5 transition group-open:rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+        </summary>
+        <p class="mt-3 text-white/70">Você receberá orientações práticas para reduzir ansiedade, melhorar a comunicação e não se sabotar durante o processo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->  <footer class="border-t border-white/10 py-10 text-sm text-white/60 glass">    <div class="mx-auto flex max-w-6xl flex-col items-start justify-start gap-3 gap-6 px-6 md:flex-row md:items-center">      <div class="flex items-center gap-3">        <svg width="28" height="28" viewBox="0 0 200 200" class="drop-shadow-[0_0_12px_rgba(192,132,252,0.5)]"><circle cx="100" cy="100" r="86" fill="#7C3AED22" stroke="#A78BFA" stroke-width="3"/><path d="M120,55a45,45 0 1,0 0,90a35,35 0 1,1 0,-90z" fill="#E9D5FF" opacity="0.9"/></svg>        <span>© <span id="yr"></span> Taróloga Luna. Todos os direitos reservados.</span>      </div>      <div class="flex flex-wrap items-center gap-4">        <a href="#servicos" class="hover:text-white">Serviços</a>        <a href="#como-funciona" class="hover:text-white">Como funciona</a>        <a href="#faq" class="hover:text-white">Perguntas</a>        <a class="rounded-full px-4 py-2 text-white btn-grad" id="ctaBottom" target="_blank">WhatsApp</a>      </div>    </div>  </footer>  <!-- CTA flutuante -->  <a id="ctaFloat" target="_blank" class="fixed bottom-6 right-6 z-50 rounded-full px-5 py-3 text-sm font-semibold text-white shadow-xl btn-grad">Falar com a Luna</a>  <script>    // Trocar o número do WhatsApp aqui (formato 55 + DDD + número)    const WHATSAPP_NUMBER = \"5511961941238\"; // <- SUBSTITUIR    const WHATSAPP_MSG = encodeURIComponent(\"Olá, Luna! Gostaria de agendar uma consulta.\");    const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;    [\"ctaTop\",\"ctaHero\",\"ctaMid\",\"ctaBottom\",\"ctaS1\",\"ctaS2\",\"ctaS3\",\"ctaS4\",\"ctaS5\",\"ctaFloat\"].forEach(id=>{const el=document.getElementById(id); if(el) el.href=wa;});    // Ano rodapé    document.getElementById('yr').textContent = new Date().getFullYear();    // Carrossel depoimentos    let cur=1; const total=3; function show(n){for(let i=1;i<=total;i++){const el=document.getElementById('t'+i); if(!el) continue; if(i===n){el.style.opacity=1; el.style.transform='translateX(0)'; el.style.position='static';} else {el.style.opacity=0; el.style.transform='translateX(20px)'; el.style.position='absolute';}} cur=n;}    setInterval(()=>{show(cur%total+1)},4000); show(1);    // FAQ    function toggleFaq(i){const groups=document.querySelectorAll('#faq .glass'); const body=groups[i].querySelector('div.hidden, div.block'); if(body.classList.contains('hidden')){body.classList.remove('hidden'); body.classList.add('block');} else {body.classList.add('hidden'); body.classList.remove('block');}}    window.toggleFaq=toggleFaq; window.show=show;  </script></body></html>
